@@ -1,0 +1,16 @@
+2022-06-14 05:49:09,049 - INFO - 127.0.0.1 - - [14/Jun/2022 05:49:09] "GET /bookmarks/ HTTP/1.1" 200 -
+2022-06-14 05:49:09,143 - INFO - 127.0.0.1 - - [14/Jun/2022 05:49:09] "GET /static/css/styles.min.css HTTP/1.1" 200 -
+2022-06-14 05:49:09,506 - INFO - 127.0.0.1 - - [14/Jun/2022 05:49:09] "GET /static/img/eye.png HTTP/1.1" 200 -
+2022-06-14 05:49:09,508 - INFO - 127.0.0.1 - - [14/Jun/2022 05:49:09] "GET /static/favicon.ico HTTP/1.1" 200 -
+2022-06-14 05:49:09,511 - INFO - 127.0.0.1 - - [14/Jun/2022 05:49:09] "GET /static/img/bookmark.png HTTP/1.1" 200 -
+2022-06-14 05:49:10,157 - INFO - 127.0.0.1 - - [14/Jun/2022 05:49:10] "GET /static/css/styles.min.css.map HTTP/1.1" 200 -
+2022-06-14 05:49:11,138 - INFO - 127.0.0.1 - - [14/Jun/2022 05:49:11] "GET /static/favicon.ico HTTP/1.1" 200 -
+2022-06-14 05:49:11,748 - INFO - 127.0.0.1 - - [14/Jun/2022 05:49:11] "GET / HTTP/1.1" 200 -
+2022-06-14 05:49:11,841 - INFO - 127.0.0.1 - - [14/Jun/2022 05:49:11] "GET /static/css/styles.min.css HTTP/1.1" 200 -
+2022-06-14 05:49:11,859 - INFO - 127.0.0.1 - - [14/Jun/2022 05:49:11] "GET /static/img/bookmark.png HTTP/1.1" 200 -
+2022-06-14 05:49:11,892 - INFO - 127.0.0.1 - - [14/Jun/2022 05:49:11] "GET /static/img/search_icon.svg HTTP/1.1" 200 -
+2022-06-14 05:49:12,166 - INFO - 127.0.0.1 - - [14/Jun/2022 05:49:12] "GET /static/img/eye.png HTTP/1.1" 200 -
+2022-06-14 05:49:12,170 - INFO - 127.0.0.1 - - [14/Jun/2022 05:49:12] "GET /static/img/like_icon.svg HTTP/1.1" 200 -
+2022-06-14 05:49:12,236 - INFO - 127.0.0.1 - - [14/Jun/2022 05:49:12] "GET /static/favicon.ico HTTP/1.1" 200 -
+2022-06-14 05:49:12,816 - INFO - 127.0.0.1 - - [14/Jun/2022 05:49:12] "GET /static/css/styles.min.css.map HTTP/1.1" 200 -
+2022-06-14 05:49:13,884 - INFO - 127.0.0.1 - - [14/Jun/2022 05:49:13] "GET /static/favicon.ico HTTP/1.1" 200 -
