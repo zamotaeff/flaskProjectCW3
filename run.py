@@ -12,7 +12,8 @@ PATH = os.path.dirname(os.path.realpath(__file__)) + "/"
 # Создаем экземпляр Flask
 app = Flask(__name__)
 
-app.config.from_pyfile('config/development.py')
+# app.config.from_pyfile('config/development.py')
+app.config.from_pyfile('config/production.py')
 
 # регистрируем первый блюпринт
 app.register_blueprint(posts_blueprint)
@@ -21,4 +22,8 @@ app.register_blueprint(bookmarks_blueprint)
 
 # Запускаем сервер только, если файл запущен, а не импортирован
 if __name__ == "__main__":
-    app.run()
+    app.run(
+        debug=app.config.get("DEBUG"),
+        host=app.config.get("HOST"),
+        port=app.config.get("PORT")
+    )
