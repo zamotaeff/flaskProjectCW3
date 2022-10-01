@@ -12,8 +12,10 @@ PATH = os.path.dirname(os.path.realpath(__file__)) + "/"
 # Создаем экземпляр Flask
 app = Flask(__name__)
 
-# app.config.from_pyfile('config/development.py')
-app.config.from_pyfile('config/production.py')
+if os.environ.get('FLASK_DEBUG') == 'False':
+    app.config.from_pyfile('config/production.py')
+else:
+    app.config.from_pyfile('config/development.py')
 
 # регистрируем первый блюпринт
 app.register_blueprint(posts_blueprint)
