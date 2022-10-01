@@ -1,3 +1,4 @@
 DEBUG = True
 JSON_AS_ASCII = False
 PORT = 5000
+HOST = "127.0.0.1"
