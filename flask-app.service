@@ -1,0 +1,12 @@
+[Unit]
+Description=Flask App
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+WorkingDirectory=/home/lgerman/flaskProjectCW3
+Environment="PATH=/home/lgerman/venv/bin"
+ExecStart=/home/lgerman/venv/bin/gunicorn --bind 0.0.0.0:80 -w 4 run:app
+
+[Install]
+WantedBy=default.target
