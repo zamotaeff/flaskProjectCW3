@@ -1,3 +1,3 @@
-export FLASK_APP=run
 export FLASK_DEBUG=False
-python3 run.py
+export FLASK_APP=run
+flask run

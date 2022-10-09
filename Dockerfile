@@ -1,27 +1,28 @@
 FROM python:3.9.2-alpine
 
-# upgrade pip
-RUN pip install --upgrade pip
-
 # get curl for healthchecks
-RUN apk add curl
+RUN apk update && apk upgrade
+RUN apk add curl g++ python3-dev
 
 ENV HOME /app
 WORKDIR $HOME
 
 COPY requirements.txt .
 
+# venv
+ENV VIRTUAL_ENV=/venv
+
 # python setup
-#RUN python -m venv $VIRTUAL_ENV
-#ENV PATH="$VIRTUAL_ENV/bin:$PATH"
-#RUN export FLASK_APP=run.py
-#RUN export FLASK_DEBUG=False
+RUN python -m venv $VIRTUAL_ENV
+ENV PATH="$VIRTUAL_ENV/bin:$PATH"
+# upgrade pip
+RUN pip install -U pip
 RUN pip install --no-cache -r requirements.txt
 
 COPY . .
 
 # define the port number the container should expose
-#EXPOSE 5000
+EXPOSE 5000
 
-#CMD ["python", "run.py"]
+# run
 ENTRYPOINT ["sh", "entrypoint.sh"]
