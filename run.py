@@ -13,12 +13,7 @@ PATH = os.path.dirname(os.path.realpath(__file__)) + "/"
 # Создаем экземпляр Flask
 app = Flask(__name__)
 
-FLASK_DEBUG = os.environ.get('FLASK_DEBUG')
-
-if FLASK_DEBUG:
-    app.config.from_pyfile('config/development.py')
-else:
-    app.config.from_pyfile('config/production.py')
+app.config.from_pyfile('config/production.py')
 
 # SQL
 DB_USER = os.getenv('DB_USER')
@@ -37,7 +32,7 @@ db.init_app(app)
 # Запускаем сервер только, если файл запущен, а не импортирован
 if __name__ == "__main__":
     app.run(
-        debug=FLASK_DEBUG,
+        debug=app.config.get("FLASK_DEBUG"),
         host=app.config.get("HOST"),
         port=app.config.get("PORT")
     )
