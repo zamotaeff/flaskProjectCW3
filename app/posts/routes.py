@@ -1,8 +1,9 @@
 import os
 
-from flask import Blueprint, render_template, request
+from flask import Blueprint, render_template, request, jsonify
 from werkzeug.exceptions import abort
 
+from app.db import db
 from app.posts.posts_dao import PostDAO
 from app.comments.comments_dao import CommentDAO
 from app.bookmarks.routes import BookmarksDAO
@@ -83,3 +84,16 @@ def page_tag_feed(tag):
 
     except ValueError as error:
         abort(404)
+
+
+@posts_blueprint.route('/test_db/')
+def test_db():
+    result = db.session.execute(
+        'SELECT 1'
+    ).scalar()
+
+    return jsonify(
+        {
+            'result': result,
+        }
+    )
