@@ -21,8 +21,5 @@ RUN pip install --no-cache -r requirements.txt
 
 COPY . .
 
-# define the port number the container should expose
-EXPOSE 5000
-
 # run
 ENTRYPOINT ["sh", "entrypoint.sh"]
