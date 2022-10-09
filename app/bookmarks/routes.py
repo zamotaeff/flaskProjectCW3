@@ -1,7 +1,6 @@
 import os
 
-from flask import Blueprint, render_template, request, redirect
-from werkzeug.exceptions import abort
+from flask import Blueprint, render_template, redirect
 
 from app.bookmarks.bookmarks_dao import BookmarksDAO
 
